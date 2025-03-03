@@ -65,6 +65,8 @@ The `configure_jupyterhub_oidcp` function accepts the following parameters:
 - `debug`: Enable debug mode
 - `services`: A list of OpenID Connect clients that can authenticate users
 - `vault_path`: The path to the vault file
+- `service_name`: The name of the service, default is `oidcp`
+- `scopes`: Allow the user to access the service, default is ['self', 'access:services']
 
 jupyterhub_oidcp uses a vault directory to store the JWKs. The vault directory is created at the `vault_path` if it does not exist. The vault directory is used to store the JWKs for the OpenID Connect clients. The JWKs are used to sign the JWTs used in the OpenID Connect protocol.
 
